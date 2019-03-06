@@ -22,12 +22,12 @@ class PetsController < ApplicationController
   end
 
   get '/pets/:id' do 
-    @pet = Pet.find_by_id(params[:id])
+    @pet = Pet.find(params[:id])
     erb :'/pets/show'
   end
 
   get '/pets/:id/edit' do 
-    @pet = Pet.find_by_id(params[:id])
+    @pet = Pet.find(params[:id])
     erb :"/pets/edit"
   end
   
